@@ -9,7 +9,17 @@
   <body class="min-h-screen-sm">
     <header class="">
       <nav class="flex justify-end mx-5 my-4 backdrop-blur-sm">
-        <a class="px-2 py-0.5 mx-1 hover:bg-gray-100 rounded-lg transition ease-in-out" href="#"
+        <a
+          class="
+            px-2
+            py-0.5
+            mx-1
+            hover:bg-gray-100 hover:all:text-light-blue-500
+            rounded-lg
+            transition
+            ease-in-out
+          "
+          href="#"
           ><svg
             class="fill-current text-gray-800"
             xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +33,17 @@
             />
           </svg>
         </a>
-        <a class="px-2 py-0.5 mx-1 hover:bg-gray-100 rounded-lg transition ease-in-out" href="#"
+        <a
+          class="
+            px-2
+            py-0.5
+            mx-1
+            hover:bg-gray-100 hover:all:text-light-blue-500
+            rounded-lg
+            transition
+            ease-in-out
+          "
+          href="#"
           ><svg
             class="fill-current text-gray-800"
             xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +58,15 @@
           </svg>
         </a>
         <a
-          class="px-2 py-0.5 mx-1 hover:bg-gray-100 rounded-lg transition ease-in-out"
+          class="
+            px-2
+            py-0.5
+            mx-1
+            hover:bg-gray-100 hover:all:text-light-blue-500
+            rounded-lg
+            transition
+            ease-in-out
+          "
           href="https://github.com/timursaurus"
           ><svg
             class="fill-current text-gray-800"
@@ -54,7 +82,15 @@
           </svg>
         </a>
         <a
-          class="px-2 py-0.5 mx-1 hover:bg-gray-100 rounded-lg transition ease-in-out"
+          class="
+            px-2
+            py-0.5
+            mx-1
+            hover:bg-gray-100 hover:all:text-light-blue-500
+            rounded-lg
+            transition
+            ease-in-out
+          "
           href="https://t.me/timursaurus"
           ><svg
             class="fill-current text-gray-800"
@@ -70,7 +106,15 @@
           </svg>
         </a>
         <a
-          class="px-2 py-0.5 mx-1 hover:bg-gray-100 rounded-lg transition ease-in-out"
+          class="
+            px-2
+            py-0.5
+            mx-1
+            hover:bg-gray-100 hover:all:text-light-blue-500
+            rounded-lg
+            transition
+            ease-in-out
+          "
           href="https://www.instagram.com/timursaurus/"
           ><svg
             class="fill-current text-gray-800"
@@ -88,13 +132,13 @@
       </nav>
     </header>
     <main class="text-2xl min-h-screen-sm flex">
-      <button onclick="Greet()" class="focus:outline-none mx-auto">
-        <p class="font-serif text-6xl" onmouseover="Greet()" id="Hello">Hello</p>
+      <button onclick="Greet()" class="focus:outline-none mx-auto flex font-serif text-6xl ">
+        <p onmouseover="Greet()" id="Hello">Hello</p><span id='exMark1' class='italic' >!</span>
       </button>
     </main>
 
     <footer class="flex justify-center bottom-0">
-      <p>
+      <p class='' >
         <span id="copyright"
           ><script>
             document
@@ -102,7 +146,7 @@
               .appendChild(document.createTextNode(new Date().getFullYear()))
           </script></span
         >
-        &copy; Timur Bolotov
+        &copy; T<span class='italic' >i</span>mur Bolotov
       </p>
     </footer>
 
@@ -110,19 +154,15 @@
     <script>
       const Hellos = [
         "Përshëndetje",
-        "ታዲያስ",
-        "مرحبا",
         "Barev dzez",
         "Kaixo",
         "Салам",
         "Grüß Gott",
-        "নমস্কার",
         "Zdravo",
         "Olá",
         "Demat",
         "Здравей",
         "Mingalarba",
-        "ជំរាបសួរ",
         "Hola",
         "Moni moni onse",
         "你好",
@@ -133,20 +173,16 @@
         "Goedendag",
         "Kuzu-zangpo la",
         "Tere",
-        "سلام",
         "Bula",
         "Hyvää päivää",
         "Bonjour",
         "Goeie",
-        "მიესალმები",
         "Guten tag",
         "Χαίρε",
         "Namaskaar",
         "Sak pase",
         "Sannu",
         "Aloha",
-        "שלום",
-        "नमस्ते",
         "Nyob zoo",
         "Ha’u",
         "Jó napot",
@@ -155,8 +191,6 @@
         "ᐊᐃᓐᖓᐃ",
         "Dia dhuit",
         "Ciao",
-        "こんにちは",
-        "ನಮಸ್ಕಾರ",
         "Sälem",
         "안녕하세요",
         "Silav",
@@ -178,16 +212,13 @@
         "Cia",
         "Khotso",
         "Hei",
-        "ନମସ୍କାର",
         "Akkam",
         "Dzień dobry",
-        "ਸਤ ਸ੍ਰੀ ਅਕਾਲ",
         "Bună",
         "Привет",
         "Talofa",
         "Haló",
         "Āyubōvan",
-        "¡Hola!",
         "Grüss gott",
         "Sawubona",
         "Kumusta",
@@ -209,9 +240,11 @@
       ]
       function Greet() {
         let random = Hellos[Math.floor(Math.random() * Hellos.length)]
-        document.getElementById("Hello").innerHTML = random
+        
+        document.getElementById("Hello").textContent = random 
+        
       }
-      Greet()
+      // Greet()
     </script>
   </body>
 </html>
