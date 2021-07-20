@@ -4,43 +4,8 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Saurus</title>
+    <title>Education</title>
     <style>
-      .loader {
-        position: fixed;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: #fff;
-        min-width: 100vw;
-        min-height: 100vh;
-        z-index: 50;
-        font-size: 8rem;
-        padding: 0 0 25vh 0;
-        
-      }
-      .loader p {
-        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-        animation: gradient 3s ease infinite;
-        background-size: 400% 400%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      .loader span {
-        font-style: italic;
-      }
-      @keyframes gradient {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
-      
       nav > .tip:hover::after {
         content: attr(data-tooltip);
         background-color: #27272a;
@@ -53,18 +18,14 @@
         display: flex;
         z-index: 1;
       }
-      
     </style>
   </head>
   <body class="min-h-screen-sm">
-    <div class="loader">
-      <p>Port<span>f</span>olium</p>
-    </div>
     <header class="">
       <nav class="flex relative justify-end mx-5 my-4 backdrop-blur-sm">
-    
-        <a class='text-xl left-0 absolute ' href="/">Port<span class='italic' >f</span>olium</a>
-        <a data-tooltip="Bookmarks" class=" tip mx-0.5 px-2 py-0.5 hover:bg-gray-100 hover:all:text-light-blue-500 rounded-lg transition ease-in-out" href="/bookmarks/"
+        <a class="text-xl left-0 absolute" href="/">Port<span class="italic">f</span>olium</a>
+
+        <a data-tooltip="Bookmarks" class="tip mx-0.5 px-2 py-0.5 hover:bg-gray-100 hover:all:text-light-blue-500 rounded-lg transition ease-in-out" href="/bookmarks/"
           ><svg class="fill-current text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
             <path fill="none" d="M0 0h24v24H0z" />
             <path d="M5 2h14a1 1 0 0 1 1 1v19.143a.5.5 0 0 1-.766.424L12 18.03l-7.234 4.536A.5.5 0 0 1 4 22.143V3a1 1 0 0 1 1-1zm13 2H6v15.432l6-3.761 6 3.761V4z" />
@@ -98,6 +59,20 @@
         </button>
 
         <div id="menu" class="shadow-md menu absolute top-10 py-2 rounded-lg hidden">
+          <h3 class="text-gray-500 px-2 cursor-default">Navigation</h3>
+          <ul class="py-1">
+            <li class="px-2 hover:bg-gray-100 hover:text-light-blue-500 hover:underline py-1">
+              <a class="flex" href="/"
+                ><svg class="mr-2 fill-current text-gray-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="24">
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path d="M21 20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.49a1 1 0 0 1 .386-.79l8-6.222a1 1 0 0 1 1.228 0l8 6.222a1 1 0 0 1 .386.79V20zm-2-1V9.978l-7-5.444-7 5.444V19h14z" />
+                </svg>
+                <span>Back to home page</span>
+              </a>
+            </li>
+          </ul>
+
+          <hr />
           <h3 class="text-gray-500 px-2 cursor-default">Get in touch</h3>
           <ul class="py-1">
             <li class="px-2 hover:bg-gray-100 hover:text-light-blue-500 hover:underline py-1">
@@ -135,17 +110,20 @@
           <hr />
           <h3 class="text-gray-500 px-2 cursor-default">Miscellaneous</h3>
           <ul class="">
-            <li class="px-2 py-1 hover:bg-gray-100 hover:text-light-blue-500 hover:underline"><a class='flex' href="/education/"> <span>Education</span> </a></li>
-            <li class="px-2 py-1 hover:bg-gray-100 hover:text-light-blue-500 hover:underline"><a class='flex' href="/mentions/"> <span>Mentions</span> </a></li>
+            <li class="px-2 py-1 hover:bg-gray-100 hover:text-light-blue-500 hover:underline">
+              <a class="flex" href="/education/"> <span>Education</span> </a>
+            </li>
+            <li class="px-2 py-1 hover:bg-gray-100 hover:text-light-blue-500 hover:underline">
+              <a class="flex" href="/mentions/"> <span>Mentions</span> </a>
+            </li>
           </ul>
         </div>
       </nav>
     </header>
 
     <main class="text-2xl min-h-screen-sm max-w-250 container mx-auto">
-      <button onclick="Greet()" class="focus:outline-none mx-auto flex font-serif text-6xl">
-        <p class="" onmouseover="Greet()" id="Hello">Hello</p>
-        <span id="exMark1" class="italic">!</span>
+      <button class="focus:outline-none mx-auto flex font-serif text-6xl">
+        <p>Education</p>
       </button>
     </main>
 
@@ -162,101 +140,10 @@
 
     <script type="module" src="/main.js"></script>
     <script>
-      const Hellos = [
-        "Përshëndetje",
-        "Barev dzez",
-        "Kaixo",
-        "Салам",
-        "Grüß Gott",
-        "Zdravo",
-        "Olá",
-        "Demat",
-        "Здравей",
-        "Mingalarba",
-        "Hola",
-        "Moni moni onse",
-        "你好",
-        "Dobar dan",
-        "Dobrý den",
-        "Hej",
-        "Hoi",
-        "Goedendag",
-        "Kuzu-zangpo la",
-        "Tere",
-        "Bula",
-        "Hyvää päivää",
-        "Bonjour",
-        "Goeie",
-        "Guten tag",
-        "Χαίρε",
-        "Namaskaar",
-        "Sak pase",
-        "Sannu",
-        "Aloha",
-        "Nyob zoo",
-        "Ha’u",
-        "Jó napot",
-        "Góðan dag",
-        "Halló",
-        "ᐊᐃᓐᖓᐃ",
-        "Dia dhuit",
-        "Ciao",
-        "Sälem",
-        "안녕하세요",
-        "Silav",
-        "Salve",
-        "Sveiki",
-        "Hallau",
-        "Mbote",
-        "Laba diena",
-        "Moïen",
-        "Ki kati",
-        "Здраво",
-        "Salama",
-        "Halēā",
-        "Bongu",
-        "Kia ora",
-        "Yokwe",
-        "Sain uu",
-        "Cia",
-        "Khotso",
-        "Hei",
-        "Akkam",
-        "Dzień dobry",
-        "Bună",
-        "Привет",
-        "Talofa",
-        "Haló",
-        "Āyubōvan",
-        "Grüss gott",
-        "Sawubona",
-        "Kumusta",
-        "Ia ora na",
-        "Салом",
-        "Azul",
-        "Isänmesez",
-        "Sawasdee krap",
-        "Tashi delek",
-        "Osiyo",
-        "Minjhani",
-        "Merhaba",
-        "Chào bạn",
-        "Womenjeka",
-        "A gutn tog",
-        "Saluton",
-        "NuqneH",
-        "Kaltxì",
-      ]
-      function Greet() {
-        let random = Hellos[Math.floor(Math.random() * Hellos.length)]
-
-        document.getElementById("Hello").textContent = random
-      }
-      // Greet()
       window.addEventListener("load", () => {
         setTimeout(() => {
           document.querySelector(".loader").className += " hidden"
-        }, 150)
+        }, 100)
       })
 
       menu = false
