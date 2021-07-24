@@ -17,7 +17,6 @@
         z-index: 50;
         font-size: 8rem;
         padding: 0 0 25vh 0;
-        
       }
       .loader p {
         background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
@@ -40,7 +39,7 @@
           background-position: 0% 50%;
         }
       }
-      
+
       nav > .tip:hover::after {
         content: attr(data-tooltip);
         background-color: #27272a;
@@ -53,7 +52,6 @@
         display: flex;
         z-index: 1;
       }
-      
     </style>
   </head>
   <body class="min-h-screen-sm">
@@ -62,9 +60,8 @@
     </div>
     <header class="">
       <nav class="flex relative justify-end mx-5 my-4 backdrop-blur-sm">
-    
-        <a class='text-xl left-0 absolute ' href="/">Port<span class='italic' >f</span>olium</a>
-        <a data-tooltip="Bookmarks" class=" tip mx-0.5 px-2 py-0.5 hover:bg-gray-100 hover:all:text-light-blue-500 rounded-lg transition ease-in-out" href="/bookmarks/"
+        <a class="text-xl left-0 absolute" href="/">Port<span class="italic">f</span>olium</a>
+        <a data-tooltip="Bookmarks" class="tip mx-0.5 px-2 py-0.5 hover:bg-gray-100 hover:all:text-light-blue-500 rounded-lg transition ease-in-out" href="/bookmarks/"
           ><svg class="fill-current text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
             <path fill="none" d="M0 0h24v24H0z" />
             <path d="M5 2h14a1 1 0 0 1 1 1v19.143a.5.5 0 0 1-.766.424L12 18.03l-7.234 4.536A.5.5 0 0 1 4 22.143V3a1 1 0 0 1 1-1zm13 2H6v15.432l6-3.761 6 3.761V4z" />
@@ -135,25 +132,56 @@
           <hr />
           <h3 class="text-gray-500 px-2 cursor-default">Miscellaneous</h3>
           <ul class="">
-            <li class="px-2 py-1 hover:bg-gray-100 hover:text-light-blue-500 hover:underline"><a class='flex' href="/education/"> <span>Education</span> </a></li>
-            <li class="px-2 py-1 hover:bg-gray-100 hover:text-light-blue-500 hover:underline"><a class='flex' href="/mentions/"> <span>Mentions</span> </a></li>
+            <li class="px-2 py-1 hover:bg-gray-100 hover:text-light-blue-500 hover:underline">
+              <a class="flex" href="/education/"> <span>Education</span> </a>
+            </li>
+            <li class="px-2 py-1 hover:bg-gray-100 hover:text-light-blue-500 hover:underline">
+              <a class="flex" href="/mentions/"> <span>Mentions</span> </a>
+            </li>
           </ul>
         </div>
       </nav>
     </header>
 
     <main class="text-2xl min-h-screen-sm max-w-250 container px-5 mx-auto">
-      <section class='mb-10 ' >
+      <section class="mb-10">
         <button onclick="Greet()" class="focus:outline-none mx-auto flex font-serif text-6xl">
           <p class="" onmouseover="Greet()" id="Hello">Hello</p>
           <span id="exMark1" class="italic">!</span>
         </button>
       </section>
-      <section class='font-serif all:mb-3 ' >
-        <p>My name is <span >Timur Bolotov</span>. I'm an aspired <span class='' >web-developer</span>  who loves practical <span class='whitespace-nowrap' >& visual</span> design.</p>
-        <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
-        <p>Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur", и занялся его поисками в классической латинской литературе. В результате он нашёл неоспоримый первоисточник Lorem Ipsum в разделах 1.10.32 и 1.10.33 книги "de Finibus Bonorum et Malorum" ("О пределах добра и зла"), написанной Цицероном в 45 году н.э. Этот трактат по теории этики был очень популярен в эпоху Возрождения. Первая строка Lorem Ipsum, "Lorem ipsum dolor sit amet..", происходит от одной из строк в разделе 1.10.32</p>
-        
+      <section class="font-serif text-gray-800 all:mb-3">
+        <p>My name is <span>Timur Bolotov</span>. I'm an aspired <span class="">web developer</span> who loves practical <span class="whitespace-nowrap">& visual</span> design, based in Kyrgyzstan <span class="whitespace-nowrap">& Kazakhstan.</span></p>
+
+        <div>
+          <h2>Education</h2>
+          <ul class="px-5">
+            <li class="flex"><p>...2019 &mdash; Gymnasium No. 1</p></li>
+            <li class="flex"><p>2019... &mdash; Almaty Management University</p></li>
+          </ul>
+        </div>
+        <hr />
+        <div>
+          <h2>Links</h2>
+          <div class="px-5 flex justify-between underline">
+            <ul class="">
+              <li class="hover:text-light-blue-500"><a href="mailto:timursaurus@gmail.com">Email</a></li>
+              <li class="hover:text-light-blue-500"><a href="https://github.com/timursaurus">Github</a></li>
+            </ul>
+            <ul>
+              <li class="hover:text-light-blue-500"><a href="https://t.me/timursaurus">Telegram</a></li>
+              <li class="hover:text-light-blue-500"><a href="https://instagram.com/timursaurus">Instagram</a></li>
+              <li class="hover:text-light-blue-500"><a href="https://vk.com/timursaurus">VK</a></li>
+              <li class="hover:text-light-blue-500"><a href="https://twitter.com/timursaurus">Twitter</a></li>
+            </ul>
+            <ul>
+              <li class="hover:text-light-blue-500"><a href="https://steamcommunity.com/id/hackusator/">Steam</a></li>
+              <li class="hover:text-light-blue-500"><a href="https://www.youtube.com/channel/UCSLUBm18oRlWE87AsFkHKBQ">Youtube</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div></div>
       </section>
     </main>
 
